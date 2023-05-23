@@ -32,7 +32,7 @@ Objetivos al terminar:
 - Conexión entre cliente y servidor realizada.
 - Avance con la página. Definición de una temática minimalista y asignación del nombre de la empresa como "Emprex". Estética predefinida junto con una página de inicio de sesión.
 - Se ha realizado la clase FuncionesBD, poniendo todas las insecciones.
-- Se han creado las bases del programa en java.
+- Se han creado las bases del programa en Java.
 - Base de datos creada.
 
 
