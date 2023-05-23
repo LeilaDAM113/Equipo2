@@ -8,32 +8,35 @@ Objetivos generales:
 - Ha habido problemas?
 
 Los objetivos del día 22 de mayo son:
-- Se ha montado el repositorio en GitHub (añadiendo a los colaboradores) con sus respectivos issues
-- Realizar los esquemas UML, el relacional de bases de datos y el esquema de casos de uso para empezar a crear la estructura del proyecto en la programación.
-- Instalación de maquina virtual W10 y W server 2020
-- Coordinación en el proyecto
+- LEILA: Se ha montado el repositorio en GitHub (añadiendo a los colaboradores) con sus respectivos issues.
+- RAÚL Y DIEGO: Realizar los esquemas UML, el relacional de bases de datos y el esquema de casos de uso para empezar a crear la estructura del proyecto en la programación.
+- ALBERTO: Instalación de maquina virtual W10 y W server 2020.
+- Coordinación en el proyecto.
  
 Objetivos al terminar:
-- Repositorio remoto creado, falta el repositorio local.
-- Falta conectar el servidor de Windows.
-- Falta corregir el esquema UML y el esquema de casos de uso revisarlo.
-- Se ha empezado con la pagina web del Banco.
+- LEILA: Repositorio remoto creado, falta el repositorio local.
+- ALBERTO: Falta conectar el servidor de Windows.
+- RAÚL, SAMUEL Y DIEGO: Falta corregir el esquema UML y el esquema de casos de uso revisarlo.
+- HECTOR: Se ha empezado con la pagina web del banco.
 
 Los objetivos del día 23 de mayo son:
-- Instalar el Windows Server
-- Crear la base de datos
-- Se ha añadido actualizaciones a la página web.
-- Crear la estructura del programa en Java
-- Creación de los triggers de la base de datos.
-- Creación de aplicación java y su desarrollo.
-- Instalación Apache y PHPMyAdmin en Windows Server.
+- ALBERTO: Instalar el Windows Server y configurar.
+- RAÚL, SAMUEL Y DIEGO: Crear la base de datos.
+- LEILA: Se ha creado el repositorio local.
+- HECTOR: Se ha añadido actualizaciones a la página web.
+- RAÚL: Crear la estructura del programa en Java.
+- DIEGO: Creación de los triggers de la base de datos.
+- RAÚL: Creación de aplicación java y su desarrollo.
+- ALBERTO: Instalación Apache y PHPMyAdmin en Windows Server.
+- LEILA: Manejo de Visual Studio Code junto con GitBash, aprendiendo a usar Markdown.
  
 Objetivos al terminar:
-- Conexión entre cliente y servidor realizada.
-- Avance con la página. Definición de una temática minimalista y asignación del nombre de la empresa como "Emprex". Estética predefinida junto con una página de inicio de sesión.
-- Se ha realizado la clase FuncionesBD, poniendo todas las insecciones.
-- Se han creado las bases del programa en Java.
-- Base de datos creada.
+- ALBERTO: Conexión entre cliente y servidor realizada.
+- HECTOR: Avance con la página. Definición de una temática minimalista y asignación del nombre de la empresa como "Emprex". Estética predefinida junto con una página de inicio de sesión.
+- RAÚL: Se ha realizado la clase FuncionesBD, poniendo todas las insecciones.
+- RAÚL: Se han creado las bases del programa en Java.
+- RAÚL, SAMUEL Y DIEGO: Base de datos creada.
+- LEILA: Falta asociar los colores a la página y a su contenido, junto a su organización.
 
 
 
