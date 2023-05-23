@@ -6,6 +6,7 @@ Objetivos generales:
 -Ha trabajado en casa?
 -Ha conseguido su meta?
 -Ha habido problemas?
+
 Los objetivos del día 22 de mayo son:
 - Montar el repositorio en el gitHub y coordinarnos sobre el proyecto.
 - Realizar los esquemas UML, el relacional de bases de datos y el esquema de casos uso.
