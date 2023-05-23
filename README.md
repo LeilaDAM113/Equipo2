@@ -10,8 +10,8 @@ Objetivos generales:
 Los objetivos del día 22 de mayo son:
 - Se ha montado el repositorio en GitHub (añadiendo a los colaboradores) con sus respectivos issues
 - Realizar los esquemas UML, el relacional de bases de datos y el esquema de casos de uso para empezar a crear la estructura del proyecto en la programación.
- -Instalación de maquina virtual W10 y W server 2020
- -Coordinación en el proyecto
+- Instalación de maquina virtual W10 y W server 2020
+- Coordinación en el proyecto
  
 Objetivos al terminar:
 - Repositorio remoto creado, falta el repositorio local.
