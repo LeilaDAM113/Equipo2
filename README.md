@@ -17,3 +17,11 @@ Objetivos al terminar:
 - Falta conectar el servidor de Windows.
 - Falta corregir el esquema UML y el esquema de casos de uso revisarlo.
 - Se ha empezado con la pagina web del Banco.
+
+Los objetivos del día 23 de mayo son:
+- Instalar el Windows Server
+- Crear la base de datos
+- Pulir la página web
+ -Crear la estructura del programa en Java
+ 
+Objetivos al terminar:
