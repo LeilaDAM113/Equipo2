@@ -22,7 +22,7 @@ Los objetivos del día 23 de mayo son:
 - Instalar el Windows Server
 - Crear la base de datos
 - Pulir la página web
- -Crear la estructura del programa en Java
+- Crear la estructura del programa en Java
  
 Objetivos al terminar:
 - Conexión entre cliente y servidor realizada.
