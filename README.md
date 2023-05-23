@@ -25,3 +25,4 @@ Los objetivos del día 23 de mayo son:
  -Crear la estructura del programa en Java
  
 Objetivos al terminar:
+-Conexión entre cliente y servidor realizada.
