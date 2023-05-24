@@ -78,7 +78,8 @@ DEFAULT CHARACTER SET = utf8mb3;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `banco`.`prestamos` (
   `idPrestamo` VARCHAR(45) NOT NULL,
-  `descripcion` VARCHAR(80) NOT NULL DEFAULT '"Aún no esta concedido"',
+  `estado` VARCHAR(45) NOT NULL,
+  `descripcion` VARCHAR(80) NOT NULL,
   `fechaOferta` DATE NOT NULL,
   `cantidadConceder` DECIMAL(10,2) UNSIGNED NOT NULL,
   `periodo` INT UNSIGNED NOT NULL,
@@ -88,9 +89,10 @@ CREATE TABLE IF NOT EXISTS `banco`.`prestamos` (
   `cantidadMensual` DECIMAL(6,2) NULL DEFAULT NULL,
   `idCliente` VARCHAR(50) NOT NULL,
   `cantidadAPagar` DECIMAL(10,2) NULL DEFAULT NULL,
-  PRIMARY KEY (`idCliente`, `idPrestamo`),
+  PRIMARY KEY (`idPrestamo`, `idCliente`),
   UNIQUE INDEX `cantidadMensual_UNIQUE` (`cantidadMensual` ASC) VISIBLE,
   INDEX `fk_Prestamos_Cliente1_idx` (`idCliente` ASC) VISIBLE,
+  UNIQUE INDEX `idPrestamo_UNIQUE` (`idPrestamo` ASC) VISIBLE,
   CONSTRAINT `fk_Prestamos_Cliente1`
     FOREIGN KEY (`idCliente`)
     REFERENCES `banco`.`clientes` (`UID`))
