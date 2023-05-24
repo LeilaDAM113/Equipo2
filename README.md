@@ -45,6 +45,7 @@ Los objetivos del día 24 de mayo son:
 - ALBERTO: Instalar la interfaz del servidor.
 - LEILA: Enlazar Markdown con el README y seguir con la documentación a través de GitBash
 
+Objetivos al terminar:
 
 
 
