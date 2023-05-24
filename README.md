@@ -38,6 +38,12 @@ Objetivos al terminar:
 - RAÚL, SAMUEL Y DIEGO: Base de datos creada.
 - LEILA: Falta asociar los colores a la página y a su contenido, junto a su organización.
 
+Los objetivos del día 24 de mayo son:
+- SAMUEL: Unir HTML con JAVA.
+- RAÚL: Progresar con Swings.
+- DIEGO: Empezar a hacer los triggers.
+- ALBERTO: Instalar la interfaz del servidor.
+- LEILA: Enlazar Markdown con el README y seguir con la documentación a través de GitBash
 
 
 
