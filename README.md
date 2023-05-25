@@ -54,9 +54,15 @@ Objetivos al terminar:
 - SAMUEL: Se ha ayudado en el diseño de la página.
 
 Los objetivos del día 25 de mayo son:
-
-
-
+- DIEGO: Dar últimos retoques a la base de datos, introducir toda la información en esta y hacer el esquema de casos de uso.
+- LEILA: Encontrar y rediseñar un logo.
+- ALBERTO: Cargada la base de datos de la página en el servidor con acceso establecido desde la máquina externa. 
+- RAÚL: Realizar todos los Swings e implementar métodos a todos los botones.
+- SAMUEL: Acabar las FAQ.
+- HECTOR: 
 
 Objetivos al terminar:
-
+- RAÚL:
+- ALBERTO:
+- DIEGO:
+- 
