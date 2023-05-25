@@ -53,5 +53,10 @@ Objetivos al terminar:
 - RAÚL: Realización de todos los paneles de clientes en programación.
 - SAMUEL: Se ha ayudado en el diseño de la página.
 
+Los objetivos del día 25 de mayo son:
 
+
+
+
+Objetivos al terminar:
 
