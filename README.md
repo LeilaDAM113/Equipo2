@@ -7,13 +7,9 @@ Objetivos generales:
 - Ha conseguido su meta?
 - Ha habido problemas?
 
-En que consiste y lo que hemos hecho
-Quienes somos
-Objetivos al terminar:
-- RAÚL:
-- ALBERTO:
-- DIEGO:
-- LEILA: Empezar con la presentación y la creación de una firna de la empresa.
-- HÉCTOR: Seguir con el desarrollo de la página.
+Preguntas:
+* ¿En qué consiste? 
+* ¿Qué hemos hecho?
+* ¿Quienes somos?
 
-Los objetivos del día 26 de mayo son:
+
