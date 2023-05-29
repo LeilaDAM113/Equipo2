@@ -6,4 +6,6 @@ Objetivos generales:
 - Ha trabajado en casa?
 - Ha conseguido su meta?
 - Ha habido problemas?
-
+- ¿En qué consiste?
+- ¿Qué hemos hecho?
+- ¿Quienes somos?
