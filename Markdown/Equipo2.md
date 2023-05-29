@@ -8,7 +8,10 @@
 * ¿Ha trabajado en casa?
 * ¿Ha conseguido su meta?
 * ¿Ha habido problemas?
-  
+* ¿En qué consiste?
+* ¿Qué hemos hecho?
+* ¿Quienes somos?
+
 *Los objetivos del día 22 de mayo son:*
 
 - LEILA: Se ha montado el repositorio en GitHub (añadiendo a los colaboradores) con sus respectivos issues.
@@ -85,16 +88,35 @@ Los objetivos del día 26 de mayo son:
 - ALBERTO: Conectar Java con bases de datos.
 - LEILA: Falta acabar la presentación y la documentación.
 
-```
-println ("Hola Mundo");
-```
-> Esto es una cita
+*Los objetivos del día 27 de mayo son:*
+- ALBERTO: Se ha realizado el diseño visual de la aplicación.
+- RAÚL: Se ha terminado el código de Java.
+- HÉCTOR: Se ha desarrollado la página de préstamos
+- SAMUEL: Uso de las ondas en la página web
+- LEILA: Se ha creado el repositorio local desde casa y se ha seguido con la presentación.
+  
+**Objetivos al terminar:**
+- ALBERTO: Acabar la página.
+- DIEGO: Se ha acabado la base de datos.
+- LEILA: Se han añadido pegatinas a la presentación, de manera que quede bonita.
+- RAÚL: Se han arreglado los métodos de las ventanas de Swing.
+- HÉCTOR: Vincular la página con Java.
+  
+*Los objetivos del día 28 de mayo son:*
+- DIEGO: Se han terminado los diagramas de casos de uso.
+- ALBERTO: Acabar el diseño de la aplicación.
+- Se ha revisado que todo funcione con normalidad.
+  
+**Objetivos al terminar:**
+- ALBERTO: Se ha acabado el diseño de la aplicación
+- Se han corregido los posibles errores encontrados.
+  
+*Los objetivos del día 29 de mayo son:*
+- Acabar la página, la aplicación, la presentación y la documentación.
 
-![Texto alternativo](/ruta/a/la/imagen.jpg)
-<http://www.limni.net>
-[nombre que quieres darle a tu enlace][nombre de tu referencia]
-[nombre de tu referencia]: http:www.tuenlace.com
-[enlace en línea](http://www.limni.net)
+**Objetivos al terminar:**
+
+
 
 
  
