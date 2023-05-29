@@ -1,11 +1,13 @@
 # Equipo2DAM
 
 #### ÍNDICE
-  - [Sistemas informáticos](#sistemas-informáticos)
-  - [Entornos de desarrollo](#entornos-de-desarrollo)
-  - [Bases de datos](#bases-de-datos)
-  - [Lenguaje de marcas](#lenguaje-de-marcas)
-  - [Programación](#programación)
+1. [Sistemas informáticos](#sistemas-informáticos)
+2. [Entornos de desarrollo](#entornos-de-desarrollo)
+     
+     2.1 [Casos de usos y sus esquemas](#casos-de-usos-y-sus-esquemas)
+3. [Bases de datos](#bases-de-datos)
+4. [Lenguaje de marcas](#lenguaje-de-marcas)
+5. [Programación](#programación)
    
 
 ## Sistemas informáticos
