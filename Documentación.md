@@ -178,11 +178,11 @@ En cuanto al diseño, tanto de página como del logo, nos hemos basado en una fo
 La imagen de la página se centra sobretodo en colores llamativos y con correlación.
 
 En cuanto a la página web, se ha buscado que fuera bonito visualmente, pero también funcional. Esta cuenta con:
--Posibilidad de registro y logueo.
--Forma de contacto rápida y fácil.
--Preguntas resueltas más frecuentes de los usuarios.
--Mostrar las funcionalidades del banco.
--Se pueden consultar los préstamos de manera eficaz.
+- Posibilidad de registro y logueo.
+- Forma de contacto rápida y fácil.
+- Preguntas resueltas más frecuentes de los usuarios.
+- Mostrar las funcionalidades del banco.
+- Se pueden consultar los préstamos de manera eficaz.
 
 
 ## Programación
