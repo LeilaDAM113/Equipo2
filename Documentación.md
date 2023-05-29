@@ -199,15 +199,193 @@ Por último, hemos gestionado la aplicación para que el propio empleado pueda v
 En cuanto al diseño, hemos decidido basarnos en la página web, ya que aparte del morado, nuestra página se basa en los colores azul y blanco, nos hemos propuesto realizar un diseño minimalista y funcional, ya que así el empleado puede visualizar con fácilidad lo que requiera el cliente en el momento, ya que nuestro objetivo siempre ha sido hacer una aplicación que sea rápida, eficaz e innovadora.
 
 En cuanto a los objetivos pedidos por el cliente hemos realizado las siguientes modificaciones:
-~~~
-- Recogida de datos de cada uno de los clientes.
+- Recogida de datos de cada uno de los clientes:
 ```
-println ("");
+public static List<Cliente> listarClientes() {
+       List<Cliente> clientes = new ArrayList<>();
+       String sql = "SELECT UID,dni,nombre,apellidos,telefono,direccion,localidad,fechaNac FROM clientes order by UID";
+        try ( PreparedStatement stmt = getConnection().prepareStatement(sql);) {
+                try(ResultSet rs = stmt.executeQuery();) {
+           
+            while (rs.next()) {
+                    Cliente cliente = new Cliente( rs.getString("UID"),rs.getString("dni"),rs.getString("nombre"),
+                rs.getString("apellidos"),rs.getString("telefono"),rs.getString("direccion"),rs.getString("localidad"),rs.getDate("fechaNac").toLocalDate());
+                if (!clientes.add(cliente)) {
+                    throw new Exception("error no se ha insertado el objeto en la colección");
+                }
+            }
+            }
+
+        } catch (SQLException ex) {
+            // errores
+            System.out.println("SQLException: " + ex.getMessage());
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return clientes;
+     }
 ```
-![Casos de uso](/)
-- Muestra de datos recogidos.
-- Cálculo de los préstamos de todos los clientes.
-- Muestra de datos de la concesión de un cliente concreto.
-- Muestra de datos de las concesiones de varios clientes en función de la localidad.
-~~~
+- Muestra de datos recogidos:
+```
+ public void mostrarClientes() {
+        model = new DefaultTableModel();
+        model.addColumn("UID");
+        model.addColumn("dni");
+        model.addColumn("nombre");
+        model.addColumn("apellidos");
+        model.addColumn("telefono");
+        model.addColumn("direccion");
+        model.addColumn("localidad");
+        model.addColumn("Registrado");
+        visor2.setModel(model);
+        List<Cliente> clientes = FuncionesBD.listarClientes();
+        String[] datos = new String[8];
+        Iterator<Cliente> it = clientes.iterator();
+        while (it.hasNext()) {
+            Cliente c = it.next();
+            PerfilCliente p = FuncionesBD.mostrarPerfil(c.getUID());
+            datos[0] = c.getUID();
+            datos[1] = c.getDni();
+            datos[2] = c.getNombre();
+            datos[3] = c.getApellidos();
+            datos[4] = c.getTelefono();
+            datos[5] = c.getDireccion();
+            datos[6] = c.getLocalidad();
+            datos[7] = (p != null) ? "SI" : "NO";
+            model.addRow(datos);
+
+        }
+    }
+
+```
+- Cálculo de los préstamos de todos los clientes:
+  
+  ```
+   public int comprobarPerfil(PerfilCliente p, String uid) {
+        int apto = 0;
+        p = FuncionesBD.mostrarPerfil(uid);
+        if (!p.isMoroso() && !p.isInmersoProcesoJudicial()) {
+            if (p.getSituacionLaboral().equalsIgnoreCase("desempleado") || p.getSituacionLaboral().equalsIgnoreCase("ama de casa") || p.getSituacionLaboral().equalsIgnoreCase("estudiante")) {
+                if (p.getIdPareja() != null && p.getCasado() != null) {
+                    if (p.getCasado().equalsIgnoreCase("en gananciales")) {
+                        apto = 1;
+                    }
+
+                }
+            }
+        }
+        if (p.getSituacionLaboral().equalsIgnoreCase("empleado") || p.getSituacionLaboral().equalsIgnoreCase("rentista") || p.getSituacionLaboral().equalsIgnoreCase("pensionista")) {
+            apto = 2;
+        }
+        return apto;
+    }
+
+    public double cantPrestamo(PerfilCliente p, CuentaBancaria c, String uid) {
+        double prestamo = 0;
+        p = FuncionesBD.mostrarPerfil(uid);
+        int comprueba = comprobarPerfil(p, uid);
+        if (comprueba != 0) {
+            if (comprueba == 1) {
+                PerfilCliente pareja = FuncionesBD.mostrarPerfil(p.getIdPareja());
+                c = FuncionesBD.mostrarCuenta(pareja.getIdPerfil());
+            } else if (comprueba == 2) {
+                c = FuncionesBD.mostrarCuenta(p.getIdPerfil());
+            }
+
+            if ((c.getCantNominaUltimoMes() >= 1000 && c.getCantNominaUltimoMes() < 2000) && (c.getCantMediaUltimos12Meses() >= 1000 && c.getCantMediaUltimos12Meses() < 2000)) {
+                prestamo = 5000;
+            }
+        }
+        if ((c.getCantNominaUltimoMes() >= 2000 && c.getCantNominaUltimoMes() < 3000) && (c.getCantMediaUltimos12Meses() > 2000 && c.getCantMediaUltimos12Meses() < 3000)) {
+            prestamo = 10000;
+        }
+        if ((c.getCantNominaUltimoMes() >= 3000) && (c.getCantMediaUltimos12Meses() > 3000)) {
+            prestamo = 15000;
+        }
+
+        return prestamo;
+    }
+
+  ```
+- Muestra de datos de la concesión de un cliente concreto:
+  ```
+  public void mostrarPrestamosCliente() {
+        model = new DefaultTableModel();
+        model.addColumn("idCliente");
+        model.addColumn("idPrestamo");
+        model.addColumn("Estado");
+        model.addColumn("Descripcion");
+        model.addColumn("fechaOferta");
+        model.addColumn("Cantidad");
+        model.addColumn("Periodo meses");
+        model.addColumn("interes");
+        model.addColumn("Dias para aceptar");
+        model.addColumn("FechaFirma");
+        model.addColumn("Cantidad Mensual");
+        model.addColumn("Cantidad Restante");
+        visor.setModel(model);
+
+        String[] datos = new String[12];
+
+        List<Prestamo> prestamos = FuncionesBD.mostrarPrestamosCliente(cliente);
+
+        for (Prestamo prestamo : prestamos) {
+            if (cliente.getUID().equals(prestamo.getIdCliente())) {
+                datos[0] = prestamo.getIdCliente();
+                datos[1] = prestamo.getId();
+                datos[2] = prestamo.getEstado();
+                datos[3] = prestamo.getDescripcion();
+                datos[4] = String.valueOf(prestamo.getFechaOferta());
+                datos[5] = String.valueOf(prestamo.getCantidadTotal());
+                datos[6] = String.valueOf(prestamo.getPeriodoEnMeses());
+                datos[7] = String.valueOf(prestamo.getTipoInteres());
+                datos[8] = String.valueOf(prestamo.getPlazoEnDias());
+                datos[9] = String.valueOf(prestamo.getFechaFirma());
+                datos[10] = String.valueOf(prestamo.getCantidadMensual());
+                datos[11] = String.valueOf(prestamo.getCantidadRestante());
+                model.addRow(datos);
+            }
+
+        }
+    }
+  ```
+- Muestra de datos de las concesiones de varios clientes en función de la localidad:
+```
+ public void mostrarPrestamosPorLocalidad(String localidad) {
+        model = new DefaultTableModel();
+        model.addColumn("idPrestamo");
+        model.addColumn("Estado");
+        model.addColumn("Descripcion");
+        model.addColumn("Cantidad");
+        model.addColumn("Periodo meses");
+        model.addColumn("FechaFirma");
+        model.addColumn("Cantidad Mensual");
+        model.addColumn("Cantidad Restante");
+        model.addColumn("idCliente");
+        model.addColumn("Localidad");
+        visor2.setModel(model);
+        List<Cliente> clientes = FuncionesBD.listarClientes();
+        String[] datos = new String[10];
+        for (Cliente c : clientes) {
+            if (c.getLocalidad().equalsIgnoreCase(localidad)) {
+                List<Prestamo> prestamos = FuncionesBD.listarPrestamoLocalidad(c);
+                for (Prestamo prestamo : prestamos) {
+                    datos[0] = prestamo.getId();
+                    datos[1] = prestamo.getEstado();
+                    datos[2] = prestamo.getDescripcion();
+                    datos[3] = String.valueOf(prestamo.getCantidadTotal());
+                    datos[4] = String.valueOf(prestamo.getPeriodoEnMeses());
+                    datos[5] = String.valueOf(prestamo.getFechaFirma());
+                    datos[6] = String.valueOf(prestamo.getCantidadMensual());
+                    datos[7] = String.valueOf(prestamo.getCantidadRestante());
+                    datos[8] = prestamo.getIdCliente();
+                    datos[9] = c.getLocalidad();
+                    model.addRow(datos);
+                }
+
+            }
+        }
+    }
+```
+
 
