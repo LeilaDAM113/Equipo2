@@ -1,6 +1,6 @@
 # Equipo2DAM
 
-#### ÍNDICE
+### ÍNDICE
 1. [Sistemas informáticos](#sistemas-informáticos)
 2. [Entornos de desarrollo](#entornos-de-desarrollo)
      
