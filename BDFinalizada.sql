@@ -211,8 +211,7 @@ CREATE TABLE `perfiles` (
   PRIMARY KEY (`idCliente`),
   KEY `fk_Perfil_Cliente_idx` (`idCliente`),
   KEY `fk_Perfil_Cliente1_idx` (`idPareja`),
-  CONSTRAINT `fk_Perfil_Cliente` FOREIGN KEY (`idCliente`) REFERENCES `clientes` (`UID`),
-  CONSTRAINT `fk_Perfil_Cliente1` FOREIGN KEY (`idPareja`) REFERENCES `clientes` (`UID`)
+  CONSTRAINT `fk_Perfil_Cliente` FOREIGN KEY (`idCliente`) REFERENCES `clientes` (`UID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -234,19 +233,6 @@ UNLOCK TABLES;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `perfiles_AFTER_UPDATE` AFTER UPDATE ON `perfiles` FOR EACH ROW BEGIN
-declare auxP varchar(50);
-select idpareja into auxp from (select * from perfiles) as a where idCliente=New.idPareja;
-if	auxP is null or auxP!=New.idCliente then
-	update perfiles set idPareja=NEW.idCliente where idCliente=idPareja;
-end if;
-END */;;
-DELIMITER ;
-/*!50003 SET sql_mode              = @saved_sql_mode */ ;
-/*!50003 SET character_set_client  = @saved_cs_client */ ;
-/*!50003 SET character_set_results = @saved_cs_results */ ;
-/*!50003 SET collation_connection  = @saved_col_connection */ ;
-
 --
 -- Table structure for table `prestamos`
 --
