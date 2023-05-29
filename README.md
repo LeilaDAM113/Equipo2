@@ -1,5 +1,6 @@
 #Equipo2DAM
-Objetivos generales:
+
+*Objetivos generales:*
 - Quién va a hacer qué?
 - Cómo?
 - Por qué?
