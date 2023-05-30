@@ -14,7 +14,7 @@
 En cuanto a la parte propia de sistemas:
 
 Se ha virtualizado una máquina windows 10 y windows server 2019.
-los protocolos iscm4 
+Se han establecido la conexion entre cliente servidor mediante protocolo icmpv4 con una excepcion en el firewall para la ip de cliente y servidor
 Además, se ha instalado xampp en windows server para alojar la pagina web y la base de datos.
 Para la configuración de xampp hemos fijado el puerto 8080 en apache ya que el 80 suele dar problemas, junto con la modificación del Path para asociar la ip del cliente al dominio creado con el nombre de nuestra aplicación “emprex.es”. 
 
