@@ -1,0 +1,306 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+    font-family: 'open sans';
+  }
+  
+  .contenedor{
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  /* Menu de paginas y fondo inicial (header) */
+  
+  header{
+    width: 100%;
+    height: 210px;
+    background: #8E2DE2; 
+    background: -webkit-linear-gradient(to right, #4b00e08a, hsla(275, 95%, 42%, 0.852)), url("https://academy-public.coinmarketcap.com/optimized-uploads/f3088990e0ff40dfb2ad553750aa6d48.jpg"); 
+    background: linear-gradient(to right, #4b00e08a, hsla(275, 95%, 42%, 0.852)), url("https://academy-public.coinmarketcap.com/optimized-uploads/f3088990e0ff40dfb2ad553750aa6d48.jpg"); 
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+  }
+  
+  nav {
+    text-align: right;
+    padding: 30px 70px;
+  }
+  
+  nav > a {
+    color: #ffffff;
+    font-weight: 300;
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  nav > a:hover{
+    color:#000000;
+  }
+  
+  .InicioSesion{
+    color:#4a0be9;
+    font-weight: bolder;
+    background-color: #ffffff;
+    display: inline-block; 
+    border-radius: 10px;
+    padding: 5px 8px 8px 8px;
+  }
+  
+  .TextoSesion > a > img{
+    width: 70px;
+    height: 70px;
+    left: 29px;
+    position: relative;
+    bottom: 509px;
+  }
+  
+  header .textos-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  header .texto-empresa{
+    display: flex;
+    text-align: right;
+    font-size: 23px;
+  }
+  
+  .wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #8105ba;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+  }
+  
+  .chat-button:hover {
+    background-color: #4d0280;
+  }
+  
+  .chat-button > a {
+    text-decoration: none;
+    color: white;
+  }
+
+  /* Cuerpo de la pagina (Body) */
+
+  body {
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .calculadora {
+    width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  form {
+    margin-top: 20px;
+  }
+  
+  .input-group {
+    margin-bottom: 10px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+  }
+  
+  .input-group input[type="submit"] {
+    background-color: #ce531a;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #resultado {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+
+  /* titulo */
+
+.titu{
+    background: -webkit-linear-gradient(#3a00ce,rgb(145, 0, 185));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;  
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: -10px;
+    margin-top: 30px;
+    font-weight: bolder;
+    position: relative;
+}
+
+
+/* prestamos */
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    background-color: #ffffff;
+    padding-top: 50px;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 800px;
+    padding: 40px;
+    background-color: #6d18ce;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+  }
+  
+  .titulo {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  
+  .slider-container {
+    margin-bottom: 10px;
+    background-color: #d0a0ec;
+    border-radius: 8px;
+  }
+  
+  .slider {
+    width: 100%;
+    height: 8px;
+    appearance: none;
+    outline: none;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .slider::-ms-thumb {
+    width: 16px;
+    height: 16px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .slider:focus {
+    outline: none;
+  }
+  
+  .loan-info {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .loan-info > p,
+  .loan-info > span {
+    margin: 0;
+    color: #ffffff;
+    font-size: 17px;
+    text-align: center;
+  }
+  
+  .button-slider {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .button-slider a {
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #8007f1;
+    border: none;
+  }
+  
+  .button-slider a:hover {
+    background-color: #986ce9;
+  }
+  
+  /* Cuadro de texto */
+  .cuadro-texto {
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 20px;
+    border: none;
+    padding: 25px 60px 25px 60px;
+    color: white;
+    text-align: justify;
+    background-color: #6d18ce;
+    border-radius: 20px;
+  }
+  
+  .cuadro-texto p {
+    margin-bottom: 12px;
+  }
+  
+  .titu {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }

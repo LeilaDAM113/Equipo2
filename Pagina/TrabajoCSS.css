@@ -1,0 +1,571 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+
+  font-family: 'open sans';
+}
+
+/* animacion */
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+body.fade-out {
+  background-color: #ffffff; 
+  pointer-events: none; 
+}
+
+body.fade-out::after {
+  content: 'Cargando...'; 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: #000000;
+}
+
+
+/**/
+
+.contenedor{
+  padding: 60px 0;
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.titulo{
+  background: -webkit-linear-gradient(#3a00ce,rgb(145, 0, 185));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: black;  
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 60px;
+  font-weight: bolder;
+}
+
+/* Menu de paginas y fondo inicial (header) */
+
+header{
+  width: 100%;
+  height: 750px;
+  background: #8E2DE2; 
+  background: -webkit-linear-gradient(to right, #4b00e08a, hsla(275, 95%, 42%, 0.852)), url("https://academy-public.coinmarketcap.com/optimized-uploads/f3088990e0ff40dfb2ad553750aa6d48.jpg"); 
+  background: linear-gradient(to right, #4b00e08a, hsla(275, 95%, 42%, 0.852)), url("https://academy-public.coinmarketcap.com/optimized-uploads/f3088990e0ff40dfb2ad553750aa6d48.jpg"); 
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+nav {
+  text-align: right;
+  padding: 30px 70px;
+}
+
+nav > a {
+  color: #ffffff;
+  font-weight: 300;
+  text-decoration: none;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+nav > a:hover{
+  color:#000000;
+}
+
+.InicioSesion{
+  color:#4a0be9;
+  font-weight: bolder;
+
+  background-color: rgba(255, 255, 255, 0.863);
+  display: inline-block; 
+  border-radius: 10px;
+  padding: 5px 8px 8px 8px;
+}
+
+.TextoSesion > h1{
+  text-align: right;
+  color: white;
+  font-size: 45px;
+  margin-left: 80px;
+  position: relative;
+  bottom: 505px;
+}
+
+.TextoSesion > a > img{
+  width: 70px;
+  height: 70px;
+  margin-right: 150px;
+  position: relative;
+  bottom: 573px;
+}
+
+header .textos-header{
+  display: flex;
+  height: 430px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+header .texto-empresa{
+  display: flex;
+  text-align: right;
+  font-size: 23px;
+}
+
+.textos-header h1{
+  font-size: 50px;
+  color: white;
+}
+.textos-header h2{
+  font-size: 30px;
+  font-weight: 300;
+  color: white;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+   background-image: url(../XHTML/img/wave.png);
+   background-size: 1000px 100px;
+ }
+ .wave.wave1{
+  animation: w1 10s linear infinite ;
+  z-index: 1000;
+  overflow: hidden;
+  top: -25px;
+  animation-delay: 0s;
+  bottom: 0;
+  position: absolute;
+  fill: rgb(255, 255, 255);
+}
+ .wave.wave2{
+  animation: w2 5s linear infinite  ;
+  z-index: 999;
+  top: -45px;
+  animation-delay: -2s;
+  bottom: 5px;
+  fill: rgb(255, 255, 255);
+}
+
+
+ @keyframes w1 {
+  0%{
+    background-position-x: 0;
+    opacity: 1;
+  }
+  100%{
+   background-position-x: 1000px;
+   opacity: 1;
+  }
+ }
+ @keyframes w2 {
+   0% {
+     background-position-x: 0;
+     opacity: 0.9;
+   }
+   50%{
+    opacity: 0.8;
+   }
+   100% {
+     background-position-x: -1000px;
+     opacity: 0.9;
+   }
+ }
+
+
+/* apartado 3 secciones */
+
+
+.container {
+  background: linear-gradient(to bottom right, #d2b6f3, #9e9cf5);
+  padding: 150px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.chat-section {
+  display: flex;
+  justify-content: space-between;
+  text-align: justify;
+  align-items: center;
+  width: 800px;
+  margin-bottom: 40px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 35px;
+}
+
+.chat-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.chat-content,
+.image-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.image-content > img {
+  border-radius: 35px;
+  max-width: 100%;
+  height: auto;
+}
+
+.chat-content h3,
+.chat-content p {
+  margin: 0;
+}
+
+.chat-content h3 {
+  font-size: 24px;
+  margin-bottom: 18px;
+  color:#6f07c4;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.chat-content p {
+  font-size: 16px;
+  padding-right: 20px;
+}
+
+.image-content img {
+  max-width: 400px;
+  height: auto;
+}
+
+
+
+/*  apartado tarjeta */
+
+
+.contenedorTarjeta {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative; 
+  margin-top: 200px;
+  margin-bottom: 280px;
+}
+
+.imagenTarjeta {
+  position: relative;
+  margin-left: 273px;
+  width: 420px;
+  
+}
+
+.contenedorTarjeta .textosTarjeta {
+  width: 42%;
+}
+
+.textosTarjeta p {
+  width: 420px;
+  text-align: justify;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
+  padding-top: 30px;
+}
+
+
+/* 3º apartado (Sobre nosotros)*/
+
+.contenedor-sobre-nosotros{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.imagen-about-us{
+  width: 45%;
+  margin-top: -57px;
+}
+
+.contenedor-sobre-nosotros .contenedor-textos{
+  width: 45%;
+}
+
+.contenedor-textos h3{
+  margin-bottom: 0px;
+}
+
+.contenido-textos h3 span{
+  background: #2f00ff;
+  color: white;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  padding: 4px;
+  box-shadow: 0 0 6px 0 rgb(0, 0, 0, 0.5);
+  margin-right: 6px;
+  border-radius: 15px;
+}
+
+.contenido-textos p {
+  padding: 12px 0px 30px 15px;
+  font-weight: 300;
+  text-align: justify;
+}
+
+/* hr */
+
+hr1{
+  background-color: blueviolet;
+  width: 31%;
+  size: 5px;
+  align-content: center;
+  margin-left: 35%;
+}
+
+/* Comentarios (Body) */
+
+.titulo2{
+  background: -webkit-linear-gradient(#3a00ce,rgb(145, 0, 185));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: black;  
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: -10px;
+  margin-top: 50px;
+  font-weight: bolder;
+}
+
+
+.testimonial-carousel {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  padding-bottom: 100px;
+}
+
+.testimonial {
+  width: 300px;
+  padding: 20px;
+  margin: 0 10px;
+  background-color: #e0e0e0;
+  text-align: center;
+  border-radius: 15px;
+  margin-top: 50px;
+}
+
+.testimonial img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.testimonial h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.testimonial p {
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*Comentarios estrellas */
+
+.rating {
+  display: inline-block;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  font-size: 30px;
+  color: #ccc;
+  float: right;
+}
+
+.rating label:before {
+  content: '\2605';
+  color: rgb(0, 64, 255);
+}
+
+
+/* FyA */
+
+.FyA {
+  margin-bottom: 100px;
+  position: relative;
+  z-index: 1;
+}
+
+.TextoFyA > h2 {
+  background: -webkit-linear-gradient(#3a00ce, rgb(145, 0, 185));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: black;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#wrap {
+  margin: 0 auto;
+  width: 500px;
+  text-align: center; 
+}
+
+details {
+  padding: 7px;
+  margin-bottom: 5px;
+  width: 400px;
+  background-color: #8E2DE2;
+  border-radius: 10px;
+  text-align: center;
+  margin: 5px auto; 
+}
+
+summary {
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+p, a, span {
+  font-size: 15px;
+  color: #000000;
+  padding: 10px;
+  text-align: center; 
+}
+
+
+/* Pie de pagina (footer) */
+
+.PiePagina{
+  background: linear-gradient(to bottom right, rgb(127, 47, 255), rgb(140, 0, 255));
+  width: 100%;
+  height: 100%;
+}
+
+.PiePagina > h5{
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-left: 1350px;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+}
+
+
+/* boton */
+
+.chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #8105ba;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+  z-index: 100000;
+}
+
+.chat-button:hover {
+  background-color: #4d0280;
+}
+
+.chat-button > a {
+  text-decoration: none;
+  color: white;
+}
+
+/* ayuda */
+
+.ayuda{
+  text-align: center;
+  padding-bottom: 50px;
+  background-color: #dcd8dd;
+}
+.ayuda > h1{
+  font-size: 40px;
+  font-weight: bolder;
+  color: #4b395b;
+}
+.ayuda > h3{
+  padding-top: 5px;
+  padding-bottom: 30px;
+  color: #424142;
+}
+
+.AyudaBoton {
+  background-color: #8E2DE2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+.AyudaBoton {
+  background-color: #8E2DE2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.AyudaBoton:hover {
+  background-color: #6307b4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
