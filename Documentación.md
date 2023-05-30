@@ -11,7 +11,58 @@
    
 
 ## Sistemas informáticos
+En cuanto a la parte propia de sistemas:
 
+Se ha virtualizado una máquina windows 10 y windows server 2019.
+los protocolos iscm4 
+Además, se ha instalado xampp en windows server para alojar la pagina web y la base de datos.
+Para la configuración de xampp hemos fijado el puerto 8080 en apache ya que el 80 suele dar problemas, junto con la modificación del Path para asociar la ip del cliente al dominio creado con el nombre de nuestra aplicación “emprex.es”. 
+
+Se ha creado y asociado el directorio que alojara nuestra web a la ip del servidor que a su vez estara asociada también al dominio “emprex.es”.
+También hemos creado una excepción de entrada y salida para el puerto 8080 en el firewall, tanto en cliente como
+en servidor para el correcto flujo de datos de la pagina web entre cliente-servidor.
+
+Se ha configurado phpmyadmin. Creando un usuario “admin” con una contraseña robusta. Lo que ha llevado a la modificación del
+path para quitar los privilegios del usuario “root” a fin de proteger los datos de nuestra base de
+datos. Después de esto, se ha cargado la base de datos en php my admin y mediante Mysql Workbench se ha comprobado que hay conexión entre cliente y servidor, lo que garantiza que nuestra app también podrá establecer dicha conexión.
+
+En cuanto a la parte de programación:
+
+Se han creado jpanels en todas las ventanas para poner una banda superior de color azul y con el titulo de cada ventana para ponerlo encima de la banda azul previamente creada. También 
+se han creado labels para insertar imágenes en las ventanas. Dichas imágenes se alojan mi carpeta
+“resources” dentro de la carpeta del main y las inicializo en el proyecto con la clase “ImageIcon”.
+
+Se ha instalado la fuente “roboto” y cambiado a dicha fuente el texto de todas las ventanas del proyecto, junto a la modificación
+de los text field para que los cuagros de texto no sean visibles. 
+Se quitan los bordes y mediante
+un separator de color negro hago que quede subrayado el texto por defecto que a su vez desde donde
+el usuario va a escribir, pongo por defecto un fondo del mismo color que el fondo de panel.
+De esta forma el cuadro es “invisible”,establezco un texto por defecto en color gris. Creo un evento para el
+mouse y lo programo, de manera que cuando pinche en el texto este desaparezca mediante la función setText y lo fijo a un string vacio.
+
+A su vez, mediante la función setForeground hago que el texto sea
+que introduzcamos ahora pase a ser de color negro.
+
+Edito todo los jbutton. Le doy la fuente que lleva todo el texto de nuestro proyecto, cambio el color de fondo por defecto y le establezco el color que sigue la linea de nuestra app. También, añado un evento para el mouse de manera que cuando paras el cursor por encima cambia de la flecha a la mano,
+haciendo que sea mas intuitivo para el usuario de que se trata de un botón. 
+
+También, cambio los bordes por defecto y de esta manera consigo que cuadno pases por encima el curso a su vez el color de fondo
+para a tener un efecto del mismo color pero con matiz metalico lo cual tambien hace mas intuitivo
+que se trata de un botón.
+
+Además, he creado nuestra api a partir del proyecto creado en netbeans junto a la modificación del pom.xml del proyecto para que al compilar el archivo cargue las librerias utilizadas, se especifique la version de maven y se carguen sus plugins, cree un directorio lib con todos estos
+archivos y configuraciones y por ultimo seleccione el main que nuestro archivo .jar utilizará.
+
+Por último, he creado el ejecutable a partir de nuestro archivo .jar mediante el programa launch4j,
+especificando el directorio de salida, un logo para el ejecutable, nuestro archivo jar y estableciendo
+la version jdk que hemos utilizado y la que se requerira para lanzar dicho ejecutable.
+
+Y, he creado un setup a partir de nuestro .exe para instalar nuestra aplicación en el equipo mediante
+el programa inno setup compiler. Una vez hecho todos los pasos anteriores tenemos dos versiones
+de nuestro proyecto, un ejecutable que operara como una version portable de nuestro programa y
+un setup que instalara dicho programa en nuestro sistema, a partir de aquí tenemos una aplicación
+real y totalmente funcional que no requiere de ningun entorno y/o compilador para ser ejecutada en
+nuestro dispositivo.
 
 
 ## Entornos de desarrollo
